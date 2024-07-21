@@ -17,10 +17,11 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path,include
-from Schools.views import hello
+from django.urls import path, include
+from Schools.views import home
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('schools/', include('Schools.urls')),
-    path('hello/', hello, name='hello'),  # Add this line if needed
+    path('', home, name='home'),  # Root URL
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
