@@ -21,5 +21,6 @@ from django.urls import path,include
 from Schools.views import hello
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('schools/', include('Schools.urls')),
-]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('schools/', include('Schools.urls')),
+    path('hello/', hello, name='hello'),  # Add this line if needed
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
