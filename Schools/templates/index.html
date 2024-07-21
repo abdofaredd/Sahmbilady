@@ -46,8 +46,10 @@
       <a href="#" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">GP</h1>
-        <span>.</span>
+        
+        <span><img src="{% static 'assets/img/sahmbilady.jpg' %}" alt="Image"></span>
+
+        <h1 class="sitename">SahmBilady</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -95,10 +97,40 @@
 
         <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="col-xl-6 col-lg-8">
-            <h2>{{school.name}}<span></span></h2>
-            <p>{{school.description}}</p>
-            <p>{{school.address}}</p>
-            <p>{{school.school_group}}</p>
+
+
+
+            <table class="table table-bordered table-warning table-active">
+<tbody>
+  <tr>
+   
+    <th> {{school.name}}</th>
+    <th>: اسم المدرسة </th>
+  </tr>
+
+  <tr>
+   
+    <th> {{school.description}}</th>
+    <th>: معلومات عن المدرسة </th>
+  </tr>
+
+  <tr>
+    <th> {{school.address}}</th>
+    <th> :عنوان المدرسة </th>
+
+  </tr>
+  
+  <tr>
+    <th> {{school.school_group}}</th>
+    <th>:المدرسة تنتمي للمجموعة </th>
+
+  </tr>
+</tbody>
+            </table>
+            <!-- <h2>   <span></span></h2>
+            <p>  </p>
+            <p>  </p>
+            <p> </p> -->
           </div>
         </div>
 
